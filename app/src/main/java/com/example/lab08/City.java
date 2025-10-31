@@ -8,7 +8,7 @@ public class City {
         this.city = city;
         this.province = province;
     }
-    // test comment
+
     public String getCityName(){
         return this.city;
     }
@@ -17,14 +17,14 @@ public class City {
         return this.province;
     }
 
-    // To make "contains" work properly in tests
+    // Make contains() / equals work correctly
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof City)) return false;
         City cityObj = (City) o;
-        return this.city.equals(cityObj.city)
-                && this.province.equals(cityObj.province);
+        return this.city.equals(cityObj.city) &&
+                this.province.equals(cityObj.province);
     }
 
     @Override
